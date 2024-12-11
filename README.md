@@ -1,16 +1,19 @@
 # ubuntu-mrefd-install
-An installation script for the '[mrefd](https://github.com/n7tae/mrefd)' [M17](https://m17project.org/) Reflector on Ubuntu 24.04 Server LTS 64-Bit.
+An installation script for the '[mrefd](https://github.com/n7tae/mrefd)' [M17](https://m17project.org/) Reflector - including the '[ham-dht-tools](https://github.com/n7tae/ham-dht-tools/)' tools and '[gomrefdash](https://github.com/kc1awv/gomrefdash)' dashboard, on a Ubuntu 24.04 Server LTS 64-Bit host system.
 
-This is a quick script that takes a vanilla Ubuntu 24.04 Server LTS 64-Bit image (that you provide/setup) and installs the needed prequisites to to get _mrefd *installed*_.
+This is a quick script that takes a vanilla Ubuntu 24.04 Server LTS 64-Bit image (that you provide/setup) and installs the needed prequisites to to get _mrefd, ham-dht-tools, and gomrefdash *installed*_.
 
 >[!IMPORTANT]
->The configuartion of _mrefd_ is not handled via this script. Please refer to the '[mrefd](https://github.com/n7tae/mrefd)' documentation once you successfully run this install script for further setup.
+>The configuartion of _mrefd_ is not handled via this script. Please refer to the [mrefd](https://github.com/n7tae/mrefd) documentation once you successfully run this install script for further setup.
+>The configuration of _gomrefdash_ is not handled via this script either. Please refer to it's documentation [here](https://github.com/kc1awv/gomrefdash) as well.
 
-There are actually 3 key repositories pulled from GitHub and installed / built from source:
+There are actually 5 key repositories pulled from GitHub and installed / built from source:
 
  - [RESTINO](https://github.com/aberaud/restinio/) [^1]
  - [OPENDHT](https://github.com/savoirfairelinux/opendht)
  - [MREFD](https://github.com/n7tae/mrefd)
+ - [HAM-DHT-TOOLS](https://github.com/n7tae/ham-dht-tools/)
+ - [GOMREFDASH]()
 
 [^1]: The install script pulls and installs a specific archive.
 
@@ -54,3 +57,6 @@ There are actually 3 key repositories pulled from GitHub and installed / built f
   ```
 >[!NOTE] 
 >'sudo' is called thoughout, so be prepaired to enter your password if prompted.
+
+>[!WARNING]
+> Currently the mrefd process and ham-dht-tools cli tools can not be run at the same time and bound to the same interface. I'm working to understand better why this is and will provide details once I have them.

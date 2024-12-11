@@ -68,3 +68,20 @@ cp example.mk mrefd.mk
 cp example.cfg mrefd.cfg
 make
 sudo make install
+
+cd # Back to home
+
+# Setup ham-dht-tools
+git clone https://github.com/n7tae/ham-dht-tools.git
+cd ham-dht-tools
+make
+
+cd # Back to home
+
+# Setup 'gomrefdash'
+git clone https://github.com/kc1awv/gomrefdash.git
+cd gomrefdash
+make
+cp gomrefdash.sample.toml gomrefdash.toml # then edit as needed...
+#./gomrefdash # @TODO: Must be manually run for now, need to figure out a systemd-ish way to auto-start on boot, etc..
+
